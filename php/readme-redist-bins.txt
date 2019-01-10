@@ -1,21 +1,121 @@
 1. libmagic (ext/fileinfo) see ext/fileinfo/libmagic/LICENSE
 2. Oniguruma (ext/mbstring) see ext/mbstring/oniguruma/COPYING
 3. libmbfl (ext/mbstring) see ext/mbstring/libmbfl/LICENSE
-4. pcrelib (ext/pcre) see ext/pcre/pcrelib/LICENCE
+4. pcre2lib (ext/pcre)
 5. ext/standard crypt
 6. ext/standard crypt's blowfish implementation
 7. Sqlite/Sqlite3 ext/sqlite3 ext/sqlite
-8. ext/json/json_parser
-9. ext/standard/rand
-10. ext/standard/scanf
-11. ext/standard/strnatcmp.c
-12. ext/standard/uuencode
-13. libxmlrpc ext/xmlrpc
-14. libzip ext/zip
-15. main/snprintf.c
-16. main/strlcat
-17. main/strlcpy
-18. libgd see ext/gd/libgd/COPYING
+8. ext/standard/rand
+9. ext/standard/scanf
+10. ext/standard/strnatcmp.c
+11. ext/standard/uuencode
+12. libxmlrpc ext/xmlrpc
+13. libzip ext/zip
+14. main/snprintf.c
+15. main/strlcat
+16. main/strlcpy
+17. libgd see ext/gd/libgd/COPYING
+18. ext/phar portions of tar implementations
+19. libbcmath (ext/bcmath) see ext/bcmath/libbcmath/COPYING.LIB
+
+
+4. pcre2lib (ext/pcre)
+
+PCRE2 LICENCE
+-------------
+
+PCRE2 is a library of functions to support regular expressions whose syntax
+and semantics are as close as possible to those of the Perl 5 language.
+
+Release 10 of PCRE2 is distributed under the terms of the "BSD" licence, as
+specified below, with one exemption for certain binary redistributions. The
+documentation for PCRE2, supplied in the "doc" directory, is distributed under
+the same terms as the software itself. The data in the testdata directory is
+not copyrighted and is in the public domain.
+
+The basic library functions are written in C and are freestanding. Also
+included in the distribution is a just-in-time compiler that can be used to
+optimize pattern matching. This is an optional feature that can be omitted when
+the library is built.
+
+
+THE BASIC LIBRARY FUNCTIONS
+---------------------------
+
+Written by:       Philip Hazel
+Email local part: ph10
+Email domain:     cam.ac.uk
+
+University of Cambridge Computing Service,
+Cambridge, England.
+
+Copyright (c) 1997-2018 University of Cambridge
+All rights reserved.
+
+
+PCRE2 JUST-IN-TIME COMPILATION SUPPORT
+--------------------------------------
+
+Written by:       Zoltan Herczeg
+Email local part: hzmester
+Emain domain:     freemail.hu
+
+Copyright(c) 2010-2018 Zoltan Herczeg
+All rights reserved.
+
+
+STACK-LESS JUST-IN-TIME COMPILER
+--------------------------------
+
+Written by:       Zoltan Herczeg
+Email local part: hzmester
+Emain domain:     freemail.hu
+
+Copyright(c) 2009-2018 Zoltan Herczeg
+All rights reserved.
+
+
+THE "BSD" LICENCE
+-----------------
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright notices,
+      this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above copyright
+      notices, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+
+    * Neither the name of the University of Cambridge nor the names of any
+      contributors may be used to endorse or promote products derived from this
+      software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+
+EXEMPTION FOR BINARY LIBRARY-LIKE PACKAGES
+------------------------------------------
+
+The second condition in the BSD licence (covering binary redistributions) does
+not apply all the way down a chain of software. If binary package A includes
+PCRE2, it must respect the condition, but if package B is software that
+includes package A, the condition is not imposed on package B unless it uses
+PCRE2 independently.
+
+End
+
 
 5. ext/standard crypt
 
@@ -47,7 +147,7 @@ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
 LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 SUCH DAMAGE.
- 
+
 
 6. ext/standard crypt's blowfish implementation
 
@@ -93,7 +193,7 @@ http://www.usenix.org/events/usenix99/provos.html
 Some of the tricks in BF_ROUND might be inspired by Eric Young's
 Blowfish library (I can't be sure if I would think of something if I
 hadn't seen his code).
- 
+
 
 7. Sqlite/Sqlite3 ext/sqlite3 ext/sqlite
 
@@ -104,31 +204,7 @@ a legal notice, here is a blessing:
   May you share freely, never taking more than you give.
 
 
-8. ext/json/json_parser
-Copyright (c) 2005 JSON.org
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-The Software shall be used for Good, not Evil.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
-9. ext/standard/rand
+8. ext/standard/rand
 The following php_mt_...() functions are based on a C++ class MTRand by
 Richard J. Wagner. For more information see the web page at
 http://www-personal.engin.umich.edu/~wagnerr/MersenneTwister.html
@@ -151,7 +227,7 @@ Modeling and Computer Simulation, Vol. 8, No. 1, January 1998, pp 3-30.
 
 Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,
 Copyright (C) 2000 - 2003, Richard J. Wagner
-All rights reserved.                          
+All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -164,8 +240,8 @@ are met:
 	 notice, this list of conditions and the following disclaimer in the
 	 documentation and/or other materials provided with the distribution.
 
-3. The names of its contributors may not be used to endorse or promote 
-	 products derived from this software without specific prior written 
+3. The names of its contributors may not be used to endorse or promote
+	 products derived from this software without specific prior written
 	 permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
@@ -181,7 +257,7 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-10. ext/standard/scanf
+9. ext/standard/scanf
 scanf.c --
 
 This file contains the base code which implements sscanf and by extension
@@ -227,7 +303,7 @@ authors grant the U.S. Government and others acting in its behalf
 permission to use and distribute the software in accordance with the
 terms specified in this license.
 
-11. ext/standard/strnatcmp.c
+10. ext/standard/strnatcmp.c
 
 strnatcmp.c -- Perform 'natural order' comparisons of strings in C.
 Copyright (C) 2000 by Martin Pool <mbp@humbug.org.au>
@@ -248,7 +324,7 @@ freely, subject to the following restrictions:
 	 misrepresented as being the original software.
 3. This notice may not be removed or altered from any source distribution.
 
-12. ext/standard/uuencode
+11. ext/standard/uuencode
 Portions of this code are based on Berkeley's uuencode/uudecode
 implementation.
 
@@ -284,31 +360,31 @@ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 SUCH DAMAGE.
 
 
-13. libxmlrpc ext/xmlrpc
+12. libxmlrpc ext/xmlrpc
 
-Copyright 2000 Epinions, Inc. 
+Copyright 2000 Epinions, Inc.
 
-Subject to the following 3 conditions, Epinions, Inc.  permits you, free 
-of charge, to (a) use, copy, distribute, modify, perform and display this 
-software and associated documentation files (the "Software"), and (b) 
-permit others to whom the Software is furnished to do so as well.  
+Subject to the following 3 conditions, Epinions, Inc.  permits you, free
+of charge, to (a) use, copy, distribute, modify, perform and display this
+software and associated documentation files (the "Software"), and (b)
+permit others to whom the Software is furnished to do so as well.
 
-1) The above copyright notice and this permission notice shall be included 
-without modification in all copies or substantial portions of the 
-Software.  
+1) The above copyright notice and this permission notice shall be included
+without modification in all copies or substantial portions of the
+Software.
 
-2) THE SOFTWARE IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OR CONDITION OF 
-ANY KIND, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION ANY 
-IMPLIED WARRANTIES OF ACCURACY, MERCHANTABILITY, FITNESS FOR A PARTICULAR 
-PURPOSE OR NONINFRINGEMENT.  
+2) THE SOFTWARE IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OR CONDITION OF
+ANY KIND, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF ACCURACY, MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE OR NONINFRINGEMENT.
 
-3) IN NO EVENT SHALL EPINIONS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, 
-SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS ARISING OUT 
-OF OR IN CONNECTION WITH THE SOFTWARE (HOWEVER ARISING, INCLUDING 
-NEGLIGENCE), EVEN IF EPINIONS, INC.  IS AWARE OF THE POSSIBILITY OF SUCH 
+3) IN NO EVENT SHALL EPINIONS, INC. BE LIABLE FOR ANY DIRECT, INDIRECT,
+SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS ARISING OUT
+OF OR IN CONNECTION WITH THE SOFTWARE (HOWEVER ARISING, INCLUDING
+NEGLIGENCE), EVEN IF EPINIONS, INC.  IS AWARE OF THE POSSIBILITY OF SUCH
 DAMAGES.
 
-14. libzip ext/zip
+13. libzip ext/zip
 zip.h -- exported declarations.
 Copyright (C) 1999-2009 Dieter Baron and Thomas Klausner
 
@@ -340,7 +416,7 @@ IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-15. main/snprintf.c
+14. main/snprintf.c
 Copyright (c) 2002, 2006 Todd C. Miller <Todd.Miller@courtesan.com>
 
 Permission to use, copy, modify, and distribute this software for any
@@ -413,8 +489,8 @@ This code is based on, and used with the permission of, the
 SIO stdio-replacement strx_* functions by Panos Tsirigotis
 <panos@alumni.cs.colorado.edu> for xinetd.
 
-16. main/strlcat
-17. main/strlcpy
+15. main/strlcat
+16. main/strlcpy
 Copyright (c) 1998 Todd C. Miller <Todd.Miller@courtesan.com>
 All rights reserved.
 
@@ -440,3 +516,30 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+18. ext/phar portions of tar implementations
+
+portions of tar implementations in ext/phar - phar_tar_octal() are based on an
+implementation by Tim Kientzle from libarchive, licensed with this license:
+
+ Copyright (c) 2003-2007 Tim Kientzle
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR(S) ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR(S) BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

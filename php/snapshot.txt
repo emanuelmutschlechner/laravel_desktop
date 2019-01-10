@@ -1,9 +1,9 @@
 This snapshot was automatically generated on
-Wed, 01 Oct 2014 20:48:34 +0000
+Thu, 06 Dec 2018 02:59:02 +0000
 
-Version: 5.6.1
+Version: 7.3.0
 Branch: HEAD
-Build: C:\php-sdk\php56\vc11\x86\obj\Release
+Build: C:\php-snap-build\php73\vc15\x86\obj\Release
 
 Built-in Extensions
 ===========================
@@ -12,16 +12,14 @@ bcmath
 calendar
 ctype
 date
-ereg
 filter
-ftp
 hash
 iconv
 json
 mcrypt
 SPL
-odbc
 pcre
+readline
 Reflection
 session
 standard
@@ -32,193 +30,102 @@ zlib
 libxml
 dom
 PDO
-Phar
+openssl
 SimpleXML
-wddx
 xml
+wddx
 xmlreader
 xmlwriter
-mhash
+curl
+ftp
+sqlite3
+Phar
+mbstring
+mysqli
 
 
 Dependency information:
-Module: php-cgi.exe
-===========================
-	msvcr110.dll
-
-Module: php.exe
-===========================
-	msvcr110.dll
-
-Module: php-win.exe
-===========================
-	msvcr110.dll
-
-Module: phpdbg.exe
-===========================
-	msvcr110.dll
-
-Module: php5phpdbg.dll
-===========================
-	msvcr110.dll
-
-Module: php_bz2.dll
-===========================
-	msvcr110.dll
-
-Module: php_com_dotnet.dll
-===========================
-	msvcr110.dll
-
 Module: php_curl.dll
 ===========================
-	libeay32.dll
-	ssleay32.dll
+	libcrypto-1_1.dll
+	libssl-1_1.dll
 	libssh2.dll
-	normaliz.dll
-	msvcr110.dll
+	nghttp2.dll
+
+Module: libssl-1_1.dll
+===========================
+	libcrypto-1_1.dll
+
+Module: libssh2.dll
+===========================
+	libcrypto-1_1.dll
 
 Module: php_enchant.dll
 ===========================
 	libenchant.dll
-	msvcr110.dll
 
-Module: php_fileinfo.dll
+Module: libenchant.dll
 ===========================
-	msvcr110.dll
+	glib-2.dll
+	gmodule-2.dll
 
-Module: php_gd2.dll
+Module: gmodule-2.dll
 ===========================
-	msvcr110.dll
+	glib-2.dll
 
-Module: php_gettext.dll
+Module: php_ftp.dll
 ===========================
-	msvcr110.dll
-
-Module: php_gmp.dll
-===========================
-	msvcr110.dll
-
-Module: php_imap.dll
-===========================
-	msvcr110.dll
-
-Module: php_interbase.dll
-===========================
-	msvcr110.dll
+	libcrypto-1_1.dll
+	libssl-1_1.dll
 
 Module: php_intl.dll
 ===========================
-	icuuc53.dll
-	icuin53.dll
-	icuio53.dll
-	msvcr110.dll
-	msvcp110.dll
+	icuuc63.dll
+	icuin63.dll
+	icuio63.dll
+
+Module: icuuc63.dll
+===========================
+	icudt63.dll
+
+Module: icuin63.dll
+===========================
+	icuuc63.dll
+
+Module: icuio63.dll
+===========================
+	icuuc63.dll
+	icuin63.dll
 
 Module: php_ldap.dll
 ===========================
 	libsasl.dll
-	msvcr110.dll
-	ssleay32.dll
-	libeay32.dll
-
-Module: php_mbstring.dll
-===========================
-	msvcr110.dll
-
-Module: php_oci8_12c.dll
-===========================
-	msvcr110.dll
-
-Module: php_opcache.dll
-===========================
-	msvcr110.dll
+	libcrypto-1_1.dll
+	libssl-1_1.dll
 
 Module: php_openssl.dll
 ===========================
-	ssleay32.dll
-	libeay32.dll
-	msvcr110.dll
+	libcrypto-1_1.dll
+	libssl-1_1.dll
 
 Module: php_pgsql.dll
 ===========================
 	libpq.dll
-	msvcr110.dll
 
-Module: php_shmop.dll
+Module: libpq.dll
 ===========================
-	msvcr110.dll
+	libssl-1_1.dll
+	libcrypto-1_1.dll
 
 Module: php_snmp.dll
 ===========================
-	libeay32.dll
-	msvcr110.dll
+	libcrypto-1_1.dll
 
-Module: php_sockets.dll
+Module: php_sodium.dll
 ===========================
-	iphlpapi.dll
-	msvcr110.dll
-
-Module: php_sqlite3.dll
-===========================
-	msvcr110.dll
-
-Module: php_sybase_ct.dll
-===========================
-	libsybcs.dll
-	libsybct.dll
-	msvcr110.dll
-
-Module: php_tidy.dll
-===========================
-	msvcr110.dll
-
-Module: php_exif.dll
-===========================
-	msvcr110.dll
-
-Module: php_mysql.dll
-===========================
-	msvcr110.dll
-
-Module: php_mysqli.dll
-===========================
-	msvcr110.dll
-
-Module: php_pdo_firebird.dll
-===========================
-	msvcr110.dll
-
-Module: php_pdo_mysql.dll
-===========================
-	msvcr110.dll
-
-Module: php_pdo_oci.dll
-===========================
-	msvcr110.dll
-
-Module: php_pdo_odbc.dll
-===========================
-	msvcr110.dll
+	libsodium.dll
 
 Module: php_pdo_pgsql.dll
 ===========================
 	libpq.dll
-	msvcr110.dll
-
-Module: php_pdo_sqlite.dll
-===========================
-	msvcr110.dll
-
-Module: php_soap.dll
-===========================
-	msvcr110.dll
-
-Module: php_xmlrpc.dll
-===========================
-	msvcr110.dll
-
-Module: php_xsl.dll
-===========================
-	msvcr110.dll
 

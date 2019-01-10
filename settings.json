@@ -18,7 +18,10 @@
         "disable_maximize_button": false,
         "center_on_screen": true,
         "start_maximized": false,
-        "start_fullscreen": false
+        "start_fullscreen": false,
+        "always_on_top": false,
+        "minimize_to_tray": false,
+        "minimize_to_tray_message": "Minimized to tray"
     },
     "popup_window": {
         "icon": "",
@@ -33,7 +36,8 @@
         "cgi_interpreter": "php/php-cgi.exe",
         "cgi_extensions": ["php"],
         "cgi_temp_dir": "",
-        "404_handler": "/index.php"
+        "404_handler": "/index.php",
+        "hide_files": []
     },
     "chrome": {
         "log_file": "debug.log",
